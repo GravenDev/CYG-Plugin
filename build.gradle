@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        name = "spigotmc-repo"
+        url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+    maven {
+        name = "sonatype"
+        url = "https://oss.sonatype.org/content/groups/public/"
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot:1.16.1-R0.1-SNAPSHOT'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+allprojects {
+    task buildPlugin(type: Copy) {
+        def shadow = !project.getTasksByName('shadowJar', true).isEmpty()
+        if(shadow) {
+            dependsOn 'shadowJar'
+        } else {
+            dependsOn 'build'
+        }
+
+        from project.buildDir.path + '/libs'
+        into destDir
+
+        if (shadow) {
+            include '*-all.jar'
+        } else {
+            include '*.jar'
+        }
+    }
+}
+
+
+shadowJar {
+    project.configurations.implementation.canBeResolved(true)
+    configurations = [project.configurations.implementation]
+}

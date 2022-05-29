@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="CYG:jar">
+    <output-path>$PROJECT_DIR$/../Serveur MC/plugins/</output-path>
+    <root id="archive" name="CYG.jar">
+      <element id="module-output" name="CYG" />
+    </root>
+  </artifact>
+</component>

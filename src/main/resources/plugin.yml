@@ -1,0 +1,88 @@
+name: CYG
+version: 0.0.7
+api-version: 1.13
+author: Graven
+main: fr.gravencyg.CYG
+commands:
+  plot:
+    description: Se teleporter vers sa parcelle
+    aliases: [pt]
+  locations:
+    aliases: [loc]
+  ev:
+    description: Obtenir un bloc d'evenement
+  actions:
+    description: Ouvrir le menu des actions
+    aliases: [ac, pa]
+  options:
+    aliases: [po]
+  setspawn:
+  setcode:
+  if:
+    description: Obtenir un bloc de condition
+  hub:
+    description: Se teleporter au Hub
+  messages:
+    description: Ouvrir le menu de gestion des messages
+    aliases: [msg]
+  play:
+    description: Jouer au jeu d'un joueur en ligne
+    aliases: [p]
+  pa:
+    description: Plot actions
+  po:
+    description: Plot options
+  pc:
+    description: Plot code
+  ptp:
+    description: Plot tp
+  rank:
+    description: rank
+    permission: rank.change
+  verifygame:
+    description: verify
+  fly:
+    description: Activer le vol doiseau
+  friend:
+    description: Invitez des amis sur votre parcelle
+  mute:
+    description: Mute un joueur
+  unmute:
+    description: Demute un joueur
+  kick:
+    description: Ejecte un joueur du serveur
+  freeze:
+    description: Gele un joueur du serveur
+  uuid:
+    description: Donne luuid du joueur
+  leave:
+    description: Quitter un jeu
+  barriere:
+    description: Barriere
+  we:
+    description: Mini worldedit pour les joueurs
+  ping:
+    description: Ping
+  head:
+    description: Donne la tete d'un joueur
+  gamemode:
+    description: Changement de gamemode
+  gamename:
+  refreshlevel:
+    permission: perm.full
+  forcelevel:
+    permission: perm.full
+  premium:
+    permission: shop.premium
+  discord:
+    description: Discord lien
+  shop:
+    description: Shop lien
+  twitter:
+    description: Twitter lien
+  hat:
+    description: Change hat
+  npc:
+    description: Gérer les personnages on joueurs
+  updateholo:
+    permission: update.holo
