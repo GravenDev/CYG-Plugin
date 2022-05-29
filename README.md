@@ -10,7 +10,8 @@
 ## Usage
 
 ```sh
-Build spigot using buildtools, with version 1.16.1. <br/> Rename `example.gradle.properties` to `gradle.properties` and fill the `destDir` with the absolute path to your plugin folder
+1. Build spigot using buildtools, with version 1.16.1.
+2. Rename `example.gradle.properties` to `gradle.properties` and fill the `destDir` with the absolute path to your plugin folder
 ```
 
 ## Author
